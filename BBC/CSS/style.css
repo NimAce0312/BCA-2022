@@ -1,0 +1,665 @@
+@import url(//db.onlinewebfonts.com/c/a1d0120b37754be8e80e39ab6ab95130?family=BBC+Reith+Sans);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
+}
+
+
+.container{
+    height: 100%;
+    padding: 0 116px 36px 116px;
+}
+
+.sub-container{
+    padding: 8px 0px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ================== Header Begins ================== */
+header{
+    height: 64px;
+    background: black;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container a{
+    text-decoration: none;
+    color: white;
+    line-height: 64px;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-right: 2px;
+}
+
+header .sb{
+    width: 193px;
+    display: flex;
+}
+
+header .sb .sign-in{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 64px;
+    width: 176px;
+    position: relative;
+}
+
+header .sb .sign-in a b{
+    width: 100%;
+    min-width: 60px;
+}
+
+header .sb .border{
+    height: 40%;
+    width: 1px;
+    border-right: 1px solid #262626;
+    margin: auto 0;
+}
+
+header .nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    width: 686px;
+}
+
+header .nav ul li{
+    padding: 0 20px;
+    position: relative;
+}
+
+header .search{
+    width: 224px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+header .search .search-bar{
+    background: #202224;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header .search .search-bar > *, .search-bar{
+    cursor: pointer;
+}
+
+header .search .search-bar label img{
+    width: 16px;
+    padding: 26px 8px 0 8px;
+}
+
+header .search .search-bar input{
+    background: none;
+    border: none;
+    width: 80%;
+}
+
+header .search .search-bar input::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+header .container .underline{
+    width: 90%;
+    height: 5px;
+}
+
+/* ======= Header Animation Beigns======= */
+
+header .hover-element:after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in-out;
+    bottom: 12px;
+}
+
+header .hover-element:hover:after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+header .container .sb .sign-in:after{
+    background-color: #0178ff;
+}
+
+header .container .home:after{
+    background-color: #fff;
+}
+
+header .container .news:after{
+    background-color: #eb0000;
+}
+
+header .container .sports:after{
+    background-color: #ffd230;
+}
+
+header .container .reel:after{
+    background-color: #0068ff;
+}
+
+header .container .worklife:after{
+    background-color: #0052a1;
+}
+
+header .container .travel:after{
+    background-color: #589e50;
+}
+
+header .container .future:after{
+    background-color: #002856;
+}
+
+header .container .culture:after{
+    background-color: #482878;
+}
+
+header .container .search .search-bar:hover{
+    background-color: #3a3c3e;
+}
+
+/* ======= Header Animation Ends======= */
+/* ================== Header Ends ================== */
+
+
+
+
+/* ================== Latest Begins ================== */
+
+.latest .container .welcome{
+    height: 54px;
+    padding-bottom: 16px;
+}
+
+.latest .container .welcome .welcome-text h2{
+    float: left;
+    color: #4a4a4a;
+    margin: 0;
+    padding-top: 32px;
+}
+
+.latest .container .welcome .date h2{
+    font-weight: lighter;
+    float: right;
+    color: #4a4a4a;
+    margin: 0;
+    padding-top: 32px;
+}
+
+.latest .container .latest-news{
+    height: 347px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest .container .latest-news .news-text{
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.000009));
+}
+
+.latest .container .latest-news .news-title{
+    color: white;
+}
+
+.latest .container .latest-news .main-news{
+    width: 616px;
+    height: 347px;
+    position: relative;
+    background: white;
+}
+
+.latest .container .latest-news .main-news img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.latest .container .latest-news .main-news img:hover{
+    opacity: 0.9;
+}
+
+.latest .container .latest-news .main-news .news-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 16px;
+    color: #d2d2d2;
+}
+
+.latest .container .latest-news .main-news .news-text .news-title{
+    margin: 0;
+}
+
+.latest .container .latest-news .main-news .news-text .news-content{
+    margin: 8px 0 0 0;
+}
+
+.latest .container .latest-news .main-news .news-text .category{
+    margin: 12px 0 0 0;
+    padding-left: 5px;
+}
+
+.latest .container .latest-news .side-news{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 4px;
+    grid-column-gap: 16px;
+    overflow-y: hidden;
+}
+
+.latest .container .latest-news .side-news .sn{
+    position: relative;
+    background: white;
+}
+
+.latest .container .latest-news .side-news .sn img{
+    height: 169px;
+    width: 300px;
+    z-index: 0;
+    position: relative;
+}
+
+img:hover{
+    opacity: 0.9;
+}
+
+.latest .container .latest-news .side-news .sn .news-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 12px;
+    color: #d2d2d2;
+}
+
+.latest .container .latest-news .side-news .sn .news-text .news-title{
+    margin: 0;
+}
+
+.latest .container .latest-news .side-news .sn .news-text .category{
+    margin: 12px 0 0 0;
+    padding-left: 5px;
+}
+
+.latest .container .latest-news .side-news .sn .news-text .sports{
+    border-color: #ffd930;
+}
+
+.category{
+    border-left: 3px solid;
+}
+
+.news{
+    border-color: #e91802;
+}
+
+.sports{
+    border-color: #ffd930;
+}
+
+.video{
+    border-color: #47a1d8;
+}
+/* ================== Latest Ends ================== */
+
+
+/* ================== Sub-Container Begins ================== */
+
+.news-header{
+    color: #4a4a4a;
+}
+
+.sub-container .news-header .container-title{
+    padding-left: 10px;
+}
+
+.sub-container .news-collection{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.sub-container .news-collection > * {
+    padding: 0 8px 16px 8px;
+    min-height: 122px;
+}
+
+.sub-container .news-collection .news-image{
+    width: 405px;
+    height: 227px;
+    background-color: white;
+}
+
+.sub-container .news-collection .news-text{
+    padding: 8px 0 0;
+    bottom: 0;
+}
+
+.sub-container .news-collection .news-text .news-content{
+    margin: 8px 0 0 0;
+}
+
+.sub-container .news-collection .news-text .news-content{
+    color: #4a4a4a;
+}
+
+.sub-container .news-collection .news-text .category{
+    margin-top: 32px;
+    color: #767676;
+    padding-left: 10px;
+}
+
+/* ================== Sub-Container Ends ================== */
+
+
+/* ================== Weather Begins ================== */
+.weather-container{
+    margin: 0;
+    padding: 0;
+}
+.weather-container .container .weather-header{
+    display: flex;
+    align-items: center;
+}
+
+.weather-container .container .weather-header > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-container .container .weather-header .container-title{
+    color: #4a4a4a;
+}
+
+.weather-container .container .weather-header .edit{
+    margin: 16px;
+    padding: 8px;
+    font-size: 10px;
+    color: #8c8c8c;
+    background: #f2f2f2;
+}
+
+.weather-container .container .weather-collection .weather-list{
+    display: flex;
+    align-items: center;
+}
+
+.weather-container .container .weather-collection .weather-list > *{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.weather-container .container .weather-collection .weather-list .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.weather-container .container .weather-collection .weather-list .info > *{
+    margin: 0;
+}
+
+.weather-container .container .weather-collection .weather-list .weather-icons{
+    width: 56px;
+    height: 56px;
+}
+
+.weather-container .container .weather-collection .weather-list .info p{
+    font-size: 12px;
+}
+/* ================== Weather Ends ================== */
+
+
+/* ================== Reel Beings ================== */
+.reel-container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: white;
+}
+
+.reel-container .reel-background{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 476px;
+}
+
+.reel-container .container{
+    width: 100%;
+    height: 476px;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.000009));
+    padding: 0;
+}
+
+.reel-container .sub-container{
+    padding: 0 116px 36px 116px;;
+}
+
+.reel-container .sub-container .reel-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reel-container .container .left-header .container-title{
+    font-size: 50px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.reel-container .container .left-header .reel-text{
+    margin-top: 10px;
+}
+
+.reel-container .container .right-header .visit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 18px;
+    padding: 5px 16px;
+}
+
+.reel-container .container .right-header .visit .visit-text{
+    margin: 0;
+}
+
+.reel-container .container .right-header .visit .arrow{
+    width: 24px;
+}
+
+.reel-container .container .reel-collection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reel-container .container .reel-collection > * {
+    background: white;
+}
+
+.reel-container .container .reel-collection .reel-image{
+    width: 405px;
+}
+
+.reel-container .container .reel-collection .reel-info{
+    margin: 8px 10px 16px 10px;
+    color: black;
+}
+/* ================== Reel Ends ================== */
+
+
+/* ================== Asia Begins ================== */
+.asia-container .container .sub-container .asia-collection{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.asia-container .container .sub-container .asia-collection > *{
+    margin: 0 8px 16px 0;
+}
+
+.asia-container .container .sub-container .asia-collection .asia-image{
+    width: 300px;
+}
+
+.asia-container .container .sub-container .asia-collection .category{
+    position: absolute;
+    bottom: 0;
+    padding-left: 8px;
+}
+/* ================== Asia Ends ================== */
+
+
+/* ================== Video Begins ================== */
+/* .video-container{
+    background: rgb(246, 246, 246);
+}
+
+.video-container .container{
+    padding: 32px 116px 32px 116px;
+}
+
+.video-container .container .video-header{
+    padding: 0 16px;
+}
+
+.video-container .container .video-header .category{
+    padding-left: 10px;
+} */
+/* ================== Video Ends ================== */
+
+
+/* ================== Language Begins ================== */
+.language-container{
+    background: #f2f2f2;
+}
+
+.language-container .container .container-header{
+    display: flex;
+    align-items: center;
+    padding: 32px 0 0 0;
+    margin: 0 0 16px 0;
+    color: #4a4a4a;
+}
+
+.language-container .container .language-lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.language-container .container .language-lists .language-title{
+    margin: 0;
+    padding: 0 0 16px 0;
+}
+
+.language-container .container .language-lists ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-container .container .language-lists > *{
+    margin-right: 10px;
+}
+
+.language-container .container .language-lists ul li{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.language-container .container .language-lists .l3 ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/* ================== Language Ends ================== */
+
+
+/* ================== Footer Begins ================== */
+footer{
+    background: #4c4c4c;
+    color: #fff;
+    font-size: 13px;
+}
+
+footer .container .container-head .title{
+    padding: 26px 0 16px 0;
+    margin: 0;
+}
+
+footer .container a{
+    color: #fff;
+}
+
+footer .container ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .container .links{
+    border-bottom: 1px solid rgb(148, 148, 148);
+    padding-bottom: 10px;
+}
+
+footer .container .links ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .container .links ul li{
+    border-right: 1px solid rgb(148, 148, 148);
+    padding: 10px 19px;
+}
+
+footer .container .links ul .firsts{
+    padding-left: 0;
+}
+
+footer .container .tou .tou-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 0 15px 0;
+}
+/* ================== Footer Ends ================== */
