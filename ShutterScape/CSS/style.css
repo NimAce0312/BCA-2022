@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+aside {
+    min-width: 250px;
+    width: 20%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+aside .container{
+    padding: 40px;
+    position: relative;
+    height: 100%;
+    color: #808080;
+}
+
+aside .container ul{
+    list-style: none;
+}
+
+aside .container a{
+    text-decoration: none;
+    color: #808080;
+}
+
+aside .container a:hover{
+    color: #000;
+    transition: .5s;
+}
+
+aside .container .logo img{
+    width: 100px;
+    height: 100px;
+}
+
+aside .container .logo .name{
+    padding: 15px 0 0 0;
+    font-size: 30px;
+}
+
+aside .container .nav{
+    padding: 40px 0;
+}
+
+aside .container .nav .nav-list .nav-items{
+    margin-bottom: 28px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+aside .container .nav .nav-list .nav-items a:hover{
+    text-decoration: underline;
+}
+
+aside .container .footer{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+}
+
+aside .container .footer .social .social-list{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+aside .container .footer .social .social-list .social-items{
+    padding-right: 15px;
+}
+
+aside .container .footer .social .social-list .social-items img{
+    height: 25px;
+    width: 25px;
+}
+
+aside .container .footer .copyright p{
+    font-size: 14px;
+}
