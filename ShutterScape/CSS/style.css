@@ -7,22 +7,24 @@
     font-family: 'Cabin', sans-serif;
 }
 
-aside {
-    min-width: 250px;
-    width: 20%;
-    height: 100vh;
+aside{
+    height: 90px;
+    width: 100%;
     background-color: #f1f1f1;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    right: 0;
 }
 
 aside .container{
-    padding: 40px;
+    padding: 0 30px;
     position: relative;
     height: 100%;
     color: #808080;
+    background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 aside .container ul{
@@ -32,6 +34,8 @@ aside .container ul{
 aside .container a{
     text-decoration: none;
     color: #808080;
+    display: flex;
+    align-items: center;
 }
 
 aside .container a:hover{
@@ -39,51 +43,268 @@ aside .container a:hover{
     transition: .5s;
 }
 
+/* =========== Mobile Begins =========== */
+
+/* =========== Logo Begins =========== */
 aside .container .logo img{
-    width: 100px;
-    height: 100px;
+    height: 40px;
+    width: 40px;
 }
 
 aside .container .logo .name{
-    padding: 15px 0 0 0;
-    font-size: 30px;
+    padding: 0 0 0 10px;
+    font-size: 26px;
+    color: #000;
+}
+/* =========== Logo Ends =========== */
+
+/* =========== Hamburger Begins =========== */
+aside .container input{
+    transform: scale(0);
 }
 
-aside .container .nav{
-    padding: 40px 0;
-}
-
-aside .container .nav .nav-list .nav-items{
-    margin-bottom: 28px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-aside .container .nav .nav-list .nav-items a:hover{
-    text-decoration: underline;
-}
-
-aside .container .footer{
+aside .container .click-container{
     position: absolute;
-    bottom: 40px;
-    left: 40px;
-    right: 40px;
-}
-
-aside .container .footer .social .social-list{
+    right: 30px;
+    height: 45px;
+    width: auto;
+    cursor: pointer;
     display: flex;
-    padding-bottom: 20px;
+    align-items: center;
 }
 
-aside .container .footer .social .social-list .social-items{
-    padding-right: 15px;
+aside .container .click-container .menu-toggle{
+    position: relative;
+    height: 40px;
+    width: 30px;
+    padding-left: auto;
 }
 
-aside .container .footer .social .social-list .social-items img{
-    height: 25px;
-    width: 25px;
+aside .container .click-container .menu-toggle .line{
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background-color: #000;
+    transition: .5s;
+    border-radius: 10px;
 }
 
-aside .container .footer .copyright p{
+aside .container .click-container .menu-toggle .line:nth-child(1){
+    position: absolute;
+    top: 10px;
+}
+
+aside .container .click-container .menu-toggle .line:nth-child(2){
+    position: absolute;
+    top: 20px;
+}
+
+aside .container .click-container .menu-toggle .line:nth-child(3){
+    position: absolute;
+    top: 30px;
+}
+
+aside .container .click-container .active .line:nth-child(1){
+    transform: rotate(45deg) translate(9.5px, 5px);
+}
+
+aside .container .click-container .active .line:nth-child(2){
+    opacity: 0;
+}
+
+aside .container .click-container .active .line:nth-child(3){
+    transform: rotate(-45deg) translate(9px, -5px);
+}
+/* =========== Hamburger Ends =========== */
+
+/* =========== Menu Begins =========== */
+aside .container .menu-contents > *{
+    display: none;
+}
+
+aside .container > .active{
+    position: absolute;
+    background: #D9D9D9;
+    top: 90px;
+    height: calc(100vh - 190px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.8;
+}
+
+aside .container > .active > *{
+    display: block;
+}
+
+aside .container .active .nav{
+    width: 100%;
+}
+
+aside .container .active .nav .nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+aside .container .active .nav .nav-list .nav-items{
+    padding: 10% 0;
+    border-bottom: 2px solid black;
+    font-size: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+aside .container .active .nav .nav-list .nav-items:last-child{
+    border-bottom: none;
+}
+/* =========== Menu Ends =========== */
+
+/* =========== Footer Begins =========== */
+aside .container .active .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:white;
+}
+
+aside .container .active .footer .social{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+aside .container .active .footer .social .social-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 100px;
+}
+
+aside .container .active .footer .social .social-list .social-items{
+    padding: 0 15px;
+}
+
+aside .container .active .footer .social .social-list .social-items img{
+    height: 20px;
+}
+
+aside .container .active .footer .copyright{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+aside .container .active .footer .copyright p{
     font-size: 14px;
 }
+/* =========== Footer Ends =========== */
+
+
+
+/* =========== Mobile Ends =========== */
+
+
+
+/* =========== Desktop Begins =========== */
+@media (min-width: 400px){
+    aside {
+        min-width: 250px;
+        width: 20%;
+        height: 100vh;
+    }
+
+    aside .container{
+        padding: 40px;
+        display: block;
+        background: #f1f1f1;
+    }
+
+    aside .container .logo a{
+        display: block;
+    }
+
+    aside .container a:hover >  .name{
+        color: #000;
+        transition: .5s;
+    }
+
+    aside .container .logo img{
+        width: 100px;
+        height: 100px;
+    }
+
+    aside .container .logo .name{
+        padding: 15px 0 0 0;
+        font-size: 30px;
+        text-decoration: none;
+        color: #808080;
+    }
+
+    aside .click-container{
+        transform: scale(0);
+    }
+
+    aside .container .menu-contents > *{
+        display: block;
+    }
+
+    aside .container .nav{
+        padding: 40px 0;
+    }
+
+    aside .container .nav .nav-list{
+        justify-content: left;
+    }
+
+    aside .container .nav .nav-list .nav-items{
+        margin-bottom: 28px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        justify-content: left;
+    }
+
+    aside .container .footer{
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+    }
+
+    aside .container .footer .social .social-list{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 20px;
+    }
+
+    aside .container .footer .social .social-list .social-items{
+        padding-right: 15px;
+    }
+
+    aside .container .footer .social .social-list .social-items img{
+        height: 25px;
+        width: 25px;
+    }
+
+    aside .container .footer .copyright p{
+        font-size: 14px;
+    }
+}
+/* =========== Desktop Ends =========== */
