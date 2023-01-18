@@ -124,7 +124,6 @@ aside .container .menu-contents > *{
 
 aside .container > .active{
     position: absolute;
-    background: #D9D9D9;
     top: 90px;
     height: calc(100vh - 190px);
     left: 0;
@@ -139,10 +138,13 @@ aside .container > .active{
 
 aside .container > .active > *{
     display: block;
+    height: 100%;
+    animation: left-to-right .5s forwards;
 }
 
 aside .container .active .nav{
     width: 100%;
+    background: #D9D9D9;
 }
 
 aside .container .active .nav .nav-list{
@@ -150,7 +152,7 @@ aside .container .active .nav .nav-list{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    height: 100%;
 }
 
 aside .container .active .nav .nav-list .nav-items{
@@ -223,7 +225,7 @@ aside .container .active .footer .copyright p{
 
 
 /* =========== Desktop Begins =========== */
-@media (min-width: 400px){
+@media (min-width: 450px){
     aside {
         min-width: 250px;
         width: 20%;
@@ -308,3 +310,16 @@ aside .container .active .footer .copyright p{
     }
 }
 /* =========== Desktop Ends =========== */
+
+/* =========== Animation Begins =========== */
+
+@keyframes left-to-right{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* =========== Animation Ends =========== */
