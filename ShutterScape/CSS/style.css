@@ -1,325 +1,643 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin');
+/*************** Global Begins ***************/
+@import url("https://fonts.googleapis.com/css2?family=Cabin");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/*************** Global Ends ***************/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cabin', sans-serif;
+/*************** Mobile Begins ***************/
+/*************** Sidebar Begins ***************/
+aside {
+  height: 90px;
+  width: 100vw;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+aside .container {
+  padding: 0 30px;
+  position: relative;
+  height: 100%;
+  color: #808080;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+aside .container ul {
+  list-style: none;
+}
+aside .container a {
+  text-decoration: none;
+  color: #808080;
+  display: flex;
+  align-items: center;
+}
+aside .container a:hover {
+  color: #000;
+  transition: 0.5s;
+}
+/*************** Logo Begins ***************/
+aside .container .logo img {
+  height: 40px;
+  width: 40px;
+}
+aside .container .logo .name {
+  padding: 0 0 0 10px;
+  font-size: 26px;
+  color: #000;
+}
+/*************** Logo Ends ***************/
+/*************** Hamburger Begins ***************/
+aside .container input {
+  transform: scale(0);
+}
+aside .container .click-container {
+  position: absolute;
+  right: 30px;
+  height: 45px;
+  width: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+aside .container .click-container .menu-toggle {
+  position: relative;
+  height: 40px;
+  width: 30px;
+  padding-left: auto;
+}
+aside .container .click-container .menu-toggle .line {
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  background-color: #000;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+aside .container .click-container .menu-toggle .line:nth-child(1) {
+  position: absolute;
+  top: 10px;
+}
+aside .container .click-container .menu-toggle .line:nth-child(2) {
+  position: absolute;
+  top: 20px;
 }
 
-aside{
-    height: 90px;
-    width: 100%;
-    background-color: #f1f1f1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+aside .container .click-container .menu-toggle .line:nth-child(3) {
+  position: absolute;
+  top: 30px;
+}
+aside .container .click-container .active .line:nth-child(1) {
+  transform: rotate(45deg) translate(9.5px, 5px);
+}
+aside .container .click-container .active .line:nth-child(2) {
+  opacity: 0;
+}
+aside .container .click-container .active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -5px);
+}
+/*************** Hamburger Ends ***************/
+
+/*************** Menu Begins ***************/
+aside .container .menu-contents > * {
+  display: none;
+}
+aside .container > .active {
+  position: fixed;
+  top: 90px;
+  height: calc(100vh - 190px);
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0.98;
+}
+aside .container > .active > * {
+  display: block;
+  height: 100%;
+  animation: left-to-right 0.5s forwards;
+}
+aside .container .active .nav {
+  width: 100%;
+  background: #d9d9d9;
+}
+aside .container .active .nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+aside .container .active .nav .nav-list .nav-items {
+  padding: 10% 0;
+  border-bottom: 2px solid black;
+  font-size: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+aside .container .active .nav .nav-list .nav-items:last-child {
+  border-bottom: none;
+}
+/*************** Menu Ends ***************/
+
+/*************** Footer Begins ***************/
+aside .container .active .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+}
+aside .container .active .footer .social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+aside .container .active .footer .social .social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100px;
+}
+aside .container .active .footer .social .social-list .social-items {
+  padding: 0 5px;
+}
+aside .container .active .footer .social .social-list .social-items img {
+  height: 20px;
+}
+aside .container .active .footer .copyright {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+aside .container .active .footer .copyright p {
+  font-size: 14px;
+}
+/*************** Footer Ends ***************/
+/*************** Sidebar Ends ***************/
+
+/*************** Main Begins ***************/
+main {
+  min-height: 100vh;
+  padding-top: 90px;
+}
+main .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*************** About Begins ***************/
+main .container .about {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 80px 30px 40px 30px;
+  overflow: hidden;
+  position: relative;
+}
+main .container .about::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%) rotate(-17deg);
+  background: white;
+  width: 120%;
+  height: 40%;
+  z-index: 1;
+}
+main .container .about .about-text {
+  margin-bottom: 26px;
+}
+main .container .about .about-text .name {
+  font-size: 3rem;
+  margin-bottom: 55px;
+}
+main .container .about .about-text .info {
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+main .container .about .about-text a .learn {
+  font-size: 24px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 50px;
+  width: fit-content;
+  margin: 0 auto;
+}
+main .container .about .photographer img {
+  width: 300px;
+}
+/*************** About Ends ***************/
+
+/*************** Gallery Begins ***************/
+main .container .gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+}
+main .container .gallery .gallery-text {
+  margin-bottom: 26px;
+  font-size: 20px;
+}
+main .container .gallery .image-container .col img {
+  width: 100%;
+  padding-bottom: 30px;
+}
+main .container .gallery .col .button a .more {
+  font-size: 24px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  width: fit-content;
+  margin: 0 auto;
+}
+/*************** Gallery Ends ***************/
+
+/*************** Contact Begins ***************/
+main .container .contact {
+  width: 100vw;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+}
+main .container .contact .contact-heading {
+  margin-bottom: 26px;
+  font-size: 20px;
+}
+main .container .contact .contact-info-cards > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px 30px;
+  background: #202224;
+}
+main .container .contact .contact-info-cards .map {
+  background: none;
+  padding: 10px 0 0 0;
+  margin-bottom: 0;
+}
+main .container .contact .contact-info-cards img {
+  height: 30px;
+  margin-bottom: 10px;
+}
+main .container .contact .contact-info-cards .contact-text .contact-title {
+  font-size: 20px;
+}
+main .container .contact .contact-info-cards .contact-text .contact-info {
+  font-size: 16px;
+}
+main .container .contact .contact-info-cards .contact-text > * {
+  margin-bottom: 15px;
+}
+main .container .contact .contact-info-cards .email .contact-info a {
+  color: white;
+}
+main .container .contact .contact-info-cards {
+  padding: 0 30px;
+}
+main .container .contact .contact-info-cards:last-child .form {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+main .container .contact .contact-info-cards:last-child .map iframe {
+  height: 400px;
+}
+/*************** Contact Ends ***************/
+
+/*************** Footer Begins ***************/
+main .container .footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 30px;
+  overflow: hidden;
+  position: relative;
+}
+main .container .footer .social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .container .footer .social .social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 100px;
+}
+main .container .footer .social .social-list .social-items {
+  padding: 0 5px;
 }
 
-aside .container{
-    padding: 0 30px;
-    position: relative;
-    height: 100%;
-    color: #808080;
-    background-color: white;
-    display: flex;
-    align-items: center;
+main .container .footer .social .social-list .social-items img {
+  height: 20px;
 }
-
-aside .container ul{
-    list-style: none;
+main .container .footer .copyright {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
 }
+main .container .footer .copyright p {
+  font-size: 14px;
+}
+/*************** Footer Ends ***************/
+/*************** Main Ends ***************/
+/*************** Mobile Ends ***************/
 
-aside .container a{
+/*************** Desktop Begins ***************/
+@media (min-width: 450px) {
+  /*************** Sidebar Begins ***************/
+  aside {
+    min-width: 250px;
+    width: 20%;
+    height: 100vh;
+  }
+  aside .container {
+    padding: 40px;
+    display: block;
+    background: #f1f1f1;
+  }
+  aside .container .logo a {
+    display: block;
+  }
+  aside .container a:hover > .name {
+    color: #000;
+    transition: 0.5s;
+  }
+  aside .container .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  aside .container .logo .name {
+    padding: 15px 0 0 0;
+    font-size: 30px;
     text-decoration: none;
     color: #808080;
-    display: flex;
-    align-items: center;
-}
-
-aside .container a:hover{
-    color: #000;
-    transition: .5s;
-}
-
-/* =========== Mobile Begins =========== */
-
-/* =========== Logo Begins =========== */
-aside .container .logo img{
-    height: 40px;
-    width: 40px;
-}
-
-aside .container .logo .name{
-    padding: 0 0 0 10px;
-    font-size: 26px;
-    color: #000;
-}
-/* =========== Logo Ends =========== */
-
-/* =========== Hamburger Begins =========== */
-aside .container input{
+  }
+  aside .click-container {
     transform: scale(0);
-}
-
-aside .container .click-container{
-    position: absolute;
-    right: 30px;
-    height: 45px;
-    width: auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-aside .container .click-container .menu-toggle{
-    position: relative;
-    height: 40px;
-    width: 30px;
-    padding-left: auto;
-}
-
-aside .container .click-container .menu-toggle .line{
-    width: 30px;
-    height: 3px;
-    position: absolute;
-    background-color: #000;
-    transition: .5s;
-    border-radius: 10px;
-}
-
-aside .container .click-container .menu-toggle .line:nth-child(1){
-    position: absolute;
-    top: 10px;
-}
-
-aside .container .click-container .menu-toggle .line:nth-child(2){
-    position: absolute;
-    top: 20px;
-}
-
-aside .container .click-container .menu-toggle .line:nth-child(3){
-    position: absolute;
-    top: 30px;
-}
-
-aside .container .click-container .active .line:nth-child(1){
-    transform: rotate(45deg) translate(9.5px, 5px);
-}
-
-aside .container .click-container .active .line:nth-child(2){
-    opacity: 0;
-}
-
-aside .container .click-container .active .line:nth-child(3){
-    transform: rotate(-45deg) translate(9px, -5px);
-}
-/* =========== Hamburger Ends =========== */
-
-/* =========== Menu Begins =========== */
-aside .container .menu-contents > *{
-    display: none;
-}
-
-aside .container > .active{
-    position: absolute;
-    top: 90px;
-    height: calc(100vh - 190px);
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    opacity: 0.8;
-}
-
-aside .container > .active > *{
+  }
+  /*************** Nav Begins ***************/
+  aside .container .menu-contents > * {
     display: block;
-    height: 100%;
-    animation: left-to-right .5s forwards;
-}
+  }
+  aside .container .nav {
+    padding: 40px 0;
+  }
+  aside .container .nav .nav-list {
+    justify-content: left;
+  }
+  aside .container .nav .nav-list .nav-items {
+    margin-bottom: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    justify-content: left;
+  }
+  /*************** Nav Ends ***************/
 
-aside .container .active .nav{
-    width: 100%;
-    background: #D9D9D9;
-}
-
-aside .container .active .nav .nav-list{
+  /*************** Footer Begins ***************/
+  aside .container .footer {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+  }
+  aside .container .footer .social .social-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-aside .container .active .nav .nav-list .nav-items{
-    padding: 10% 0;
-    border-bottom: 2px solid black;
-    font-size: 30px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-aside .container .active .nav .nav-list .nav-items:last-child{
-    border-bottom: none;
-}
-/* =========== Menu Ends =========== */
-
-/* =========== Footer Begins =========== */
-aside .container .active .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background:white;
-}
-
-aside .container .active .footer .social{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-aside .container .active .footer .social .social-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20px;
-    width: 100px;
-}
-
-aside .container .active .footer .social .social-list .social-items{
-    padding: 0 15px;
-}
-
-aside .container .active .footer .social .social-list .social-items img{
-    height: 20px;
-}
-
-aside .container .active .footer .copyright{
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-}
-
-aside .container .active .footer .copyright p{
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+  aside .container .footer .social .social-list .social-items {
+    padding-right: 15px;
+  }
+  aside .container .footer .social .social-list .social-items img {
+    height: 25px;
+    width: 25px;
+  }
+  aside .container .footer .copyright p {
     font-size: 14px;
+  }
+  /*************** Footer Ends ***************/
+  /*************** Sidebar Ends ***************/
+
+  /*************** Main Begins ***************/
+  main {
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    padding-top: 0;
+  }
+  /*************** About Begins ***************/
+  main .container .about {
+    width: 100%;
+    height: 677px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 100px;
+  }
+  main .container .about::before {
+    width: 120%;
+    height: 40%;
+    transform: translate(-50%, 100%) rotate(-3.5deg);
+  }
+  main .container .about .about-text {
+    text-align: left;
+  }
+  main .container .about .about-text .name {
+    margin-bottom: 30px;
+    font-size: 4rem;
+  }
+  main .container .about .about-text .info {
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+  }
+  main .container .about .about-text a .learn {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  main .container .about .photographer img {
+    width: 582px;
+    filter: contrast(100%) brightness(80%);
+  }
+  /*************** About Ends ***************/
+
+  /*************** Gallery Begins ***************/
+  main .container .gallery {
+    height: 100%;
+  }
+  main .container .gallery .gallery-text .title {
+    font-size: 3rem;
+  }
+  main .container .gallery .image-container {
+    display: flex;
+    width: 100%;
+  }
+  main .container .gallery .image-container .col {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    position: relative;
+  }
+  main .container .gallery .image-container .col img {
+    width: 100%;
+    padding: 10px;
+  }
+  main .container .gallery .image-container .col3 img:nth-child(2) {
+    height: 50%;
+    object-fit: cover;
+  }
+  main .container .gallery .image-container .col3 .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 15px;
+  }
+  main .container .gallery .image-container .col3 .button a .more {
+    padding: 10px 30px;
+    font-size: 1.25rem;
+  }
+  /*************** Gallery Ends ***************/
+
+  /*************** Contact Begins ***************/
+  main .container .contact {
+    width: 100%;
+    padding: 30px;
+  }
+  main .container .contact .contact-info-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .container .contact .contact-info-cards > * {
+    width: 32.5%;
+  }
+  main .container .contact .contact-info-cards:last-child > * {
+    width: 48.5%;
+  }
+  main .container .contact .contact-info-cards:last-child .form {
+    display: block;
+  }
+  main .container .contact .contact-info-cards:last-child .form form {
+    padding: 30px;
+    width: 100%;
+  }
+  main .container .contact .contact-info-cards:last-child .form form input,
+  main .container .contact .contact-info-cards:last-child .form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border: 1px solid white;
+    background-color: #202224;
+    color: white;
+    height: auto;
+  }
+  main
+    .container
+    .contact
+    .contact-info-cards:last-child
+    .form
+    form
+    input::placeholder,
+  main
+    .container
+    .contact
+    .contact-info-cards:last-child
+    .form
+    form
+    textarea::placeholder {
+    font-size: 18px;
+  }
+  main .container .contact .contact-info-cards:last-child .form form button {
+    font-size: 18px;
+    padding: 10px 30px;
+    color: #202224;
+    background-color: white;
+    border-radius: 50px;
+  }
+  main .container .contact .map iframe {
+    width: 100%;
+    height: 516px;
+  }
+  /*************** Contact Ends ***************/
+
+  /*************** Footer Begins ***************/
+  main .container .footer {
+    display: none;
+  }
+  /*************** Footer Ends ***************/
+  /*************** Main Ends ***************/
 }
-/* =========== Footer Ends =========== */
+/*************** Desktop Ends ***************/
 
-
-
-/* =========== Mobile Ends =========== */
-
-
-
-/* =========== Desktop Begins =========== */
-@media (min-width: 450px){
-    aside {
-        min-width: 250px;
-        width: 20%;
-        height: 100vh;
-    }
-
-    aside .container{
-        padding: 40px;
-        display: block;
-        background: #f1f1f1;
-    }
-
-    aside .container .logo a{
-        display: block;
-    }
-
-    aside .container a:hover >  .name{
-        color: #000;
-        transition: .5s;
-    }
-
-    aside .container .logo img{
-        width: 100px;
-        height: 100px;
-    }
-
-    aside .container .logo .name{
-        padding: 15px 0 0 0;
-        font-size: 30px;
-        text-decoration: none;
-        color: #808080;
-    }
-
-    aside .click-container{
-        transform: scale(0);
-    }
-
-    aside .container .menu-contents > *{
-        display: block;
-    }
-
-    aside .container .nav{
-        padding: 40px 0;
-    }
-
-    aside .container .nav .nav-list{
-        justify-content: left;
-    }
-
-    aside .container .nav .nav-list .nav-items{
-        margin-bottom: 28px;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        justify-content: left;
-    }
-
-    aside .container .footer{
-        position: absolute;
-        bottom: 40px;
-        left: 40px;
-        right: 40px;
-    }
-
-    aside .container .footer .social .social-list{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 20px;
-    }
-
-    aside .container .footer .social .social-list .social-items{
-        padding-right: 15px;
-    }
-
-    aside .container .footer .social .social-list .social-items img{
-        height: 25px;
-        width: 25px;
-    }
-
-    aside .container .footer .copyright p{
-        font-size: 14px;
-    }
+/*************** Animation Begins ***************/
+@keyframes left-to-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-/* =========== Desktop Ends =========== */
-
-/* =========== Animation Begins =========== */
-
-@keyframes left-to-right{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
-/* =========== Animation Ends =========== */
+/*************** Animation Ends ***************/
