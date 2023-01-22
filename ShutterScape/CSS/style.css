@@ -215,8 +215,9 @@ main .container {
   justify-content: center;
   align-items: center;
 }
+/*************** HomePage Begins ***************/
 /*************** About Begins ***************/
-main .container .about {
+main .container .about-container {
   width: 800px;
   height: 100%;
   display: flex;
@@ -229,7 +230,7 @@ main .container .about {
   overflow: hidden;
   position: relative;
 }
-main .container .about::before {
+main .container .about-container::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -240,18 +241,18 @@ main .container .about::before {
   height: 40%;
   z-index: 1;
 }
-main .container .about .about-text {
+main .container .about-container .about-text {
   margin-bottom: 26px;
 }
-main .container .about .about-text .name {
+main .container .about-container .about-text .name {
   font-size: 3rem;
   margin-bottom: 55px;
 }
-main .container .about .about-text .info {
+main .container .about-container .about-text .info {
   font-size: 20px;
   margin-bottom: 45px;
 }
-main .container .about .about-text a .learn {
+main .container .about-container .about-text a .learn {
   font-size: 24px;
   padding: 10px 20px;
   background: white;
@@ -260,31 +261,31 @@ main .container .about .about-text a .learn {
   width: fit-content;
   margin: 0 auto;
 }
-main .container .about .photographer img {
+main .container .about-container .photographer img {
   width: 300px;
 }
 /*************** About Ends ***************/
 
 /*************** Gallery Begins ***************/
-main .container .gallery {
+main .container .gallery-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 30px;
   overflow: hidden;
   position: relative;
+  padding: 30px;
 }
-main .container .gallery .gallery-text {
+main .container .gallery-container .gallery-text {
   margin-bottom: 26px;
   font-size: 20px;
 }
-main .container .gallery .image-container .col img {
+main .container .gallery-container .image-container .col img {
   width: 100%;
   padding-bottom: 30px;
 }
-main .container .gallery .col .button a .more {
+main .container .gallery-container .col .button a .more {
   font-size: 24px;
   padding: 10px 20px;
   background: black;
@@ -296,7 +297,7 @@ main .container .gallery .col .button a .more {
 /*************** Gallery Ends ***************/
 
 /*************** Contact Begins ***************/
-main .container .contact {
+main .container .contact-container {
   width: 100vw;
   height: 100%;
   background: black;
@@ -309,11 +310,11 @@ main .container .contact {
   overflow: hidden;
   position: relative;
 }
-main .container .contact .contact-heading {
+main .container .contact-container .contact-heading {
   margin-bottom: 26px;
   font-size: 20px;
 }
-main .container .contact .contact-info-cards > * {
+main .container .contact-container .contact-info-cards > * {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -323,39 +324,257 @@ main .container .contact .contact-info-cards > * {
   padding: 10px 30px;
   background: #202224;
 }
-main .container .contact .contact-info-cards .map {
+main .container .contact-container .contact-info-cards .map {
   background: none;
   padding: 10px 0 0 0;
   margin-bottom: 0;
 }
-main .container .contact .contact-info-cards img {
+main .container .contact-container .contact-info-cards img {
   height: 30px;
   margin-bottom: 10px;
 }
-main .container .contact .contact-info-cards .contact-text .contact-title {
+main .container .contact-container .contact-info-cards .contact-text .contact-title {
   font-size: 20px;
 }
-main .container .contact .contact-info-cards .contact-text .contact-info {
+main .container .contact-container .contact-info-cards .contact-text .contact-info {
   font-size: 16px;
 }
-main .container .contact .contact-info-cards .contact-text > * {
+main .container .contact-container .contact-info-cards .contact-text > * {
   margin-bottom: 15px;
 }
-main .container .contact .contact-info-cards .email .contact-info a {
+main .container .contact-container .contact-info-cards .email .contact-info a {
   color: white;
 }
-main .container .contact .contact-info-cards {
+main .container .contact-container .contact-info-cards {
   padding: 0 30px;
 }
-main .container .contact .contact-info-cards:last-child .form {
+main .container .contact-container .contact-info-cards:last-child .form {
   display: none;
   padding: 0;
   margin: 0;
 }
-main .container .contact .contact-info-cards:last-child .map iframe {
+main .container .contact-container .contact-info-cards:last-child .map iframe {
   height: 400px;
 }
 /*************** Contact Ends ***************/
+/*************** HomePage Ends ***************/
+
+/*************** Gallery Page Begins ***************/
+/*************** Gallery Header Begins ***************/
+main .container .gallery .header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+main .container .gallery .header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%) rotate(-6.5deg);
+  background: white;
+  width: 120%;
+  height: 40%;
+  z-index: 1;
+}
+main .container .gallery .header .heading {
+  color: white;
+  font-size: 64px;
+}
+/*************** Gallery Header Ends ***************/
+
+/*************** Gallery Container Begins ***************/
+main .container .gallery .gallery-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+/*************** Categories Begins ***************/
+main .container .gallery .gallery-body .categories {
+  display: flex;
+  flex-direction: row;
+}
+main .container .gallery input {
+  display: none;
+}
+main .container .gallery .gallery-body .categories .category-items .category-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 30px;
+  overflow: hidden;
+}
+main .container .gallery .gallery-body .categories .category-items .open {
+  height: auto;
+}
+main .container .gallery .gallery-body .categories .category-items .category-container label {
+  padding: 5px 10px;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+  margin: 0 10px 5px 0;
+  cursor: pointer;
+}
+main .container .gallery .gallery-body .categories .kebab {
+  width: 50px;
+}
+/*************** Categories Ends ***************/
+
+/*************** Images Begins ***************/
+main .container .gallery .gallery-body .image-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+main .container .gallery .gallery-body .col .pic {
+  padding: 10px 0;
+}
+main .container .gallery .gallery-body .col .pic img {
+  width: 100%;
+}
+/*************** Image Sorting Begins ***************/
+#check1:checked ~ .gallery-body .image-box .col .pic {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check2:checked ~ .gallery-body .image-box .col .nature,
+#check2:checked ~ .gallery-body .image-box .col .animal,
+#check2:checked ~ .gallery-body .image-box .col .macro,
+#check2:checked ~ .gallery-body .image-box .col .city,
+#check2:checked ~ .gallery-body .image-box .col .monochrome,
+#check2:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check2:checked ~ .gallery-body .image-box .col .people {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check3:checked ~ .gallery-body .image-box .col .people,
+#check3:checked ~ .gallery-body .image-box .col .animal,
+#check3:checked ~ .gallery-body .image-box .col .macro,
+#check3:checked ~ .gallery-body .image-box .col .city,
+#check3:checked ~ .gallery-body .image-box .col .monochrome,
+#check3:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check3:checked ~ .gallery-body .image-box .col .nature {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check4:checked ~ .gallery-body .image-box .col .people,
+#check4:checked ~ .gallery-body .image-box .col .nature,
+#check4:checked ~ .gallery-body .image-box .col .macro,
+#check4:checked ~ .gallery-body .image-box .col .city,
+#check4:checked ~ .gallery-body .image-box .col .monochrome,
+#check4:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check4:checked ~ .gallery-body .image-box .col .animal {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check5:checked ~ .gallery-body .image-box .col .people,
+#check5:checked ~ .gallery-body .image-box .col .nature,
+#check5:checked ~ .gallery-body .image-box .col .animal,
+#check5:checked ~ .gallery-body .image-box .col .city,
+#check5:checked ~ .gallery-body .image-box .col .monochrome,
+#check5:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check5:checked ~ .gallery-body .image-box .col .macro {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check6:checked ~ .gallery-body .image-box .col .people,
+#check6:checked ~ .gallery-body .image-box .col .nature,
+#check6:checked ~ .gallery-body .image-box .col .animal,
+#check6:checked ~ .gallery-body .image-box .col .macro,
+#check6:checked ~ .gallery-body .image-box .col .monochrome,
+#check6:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check6:checked ~ .gallery-body .image-box .col .city {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check7:checked ~ .gallery-body .image-box .col .people,
+#check7:checked ~ .gallery-body .image-box .col .nature,
+#check7:checked ~ .gallery-body .image-box .col .animal,
+#check7:checked ~ .gallery-body .image-box .col .macro,
+#check7:checked ~ .gallery-body .image-box .col .city,
+#check7:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check7:checked ~ .gallery-body .image-box .col .monochrome {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+#check8:checked ~ .gallery-body .image-box .col .people,
+#check8:checked ~ .gallery-body .image-box .col .nature,
+#check8:checked ~ .gallery-body .image-box .col .animal,
+#check8:checked ~ .gallery-body .image-box .col .macro,
+#check8:checked ~ .gallery-body .image-box .col .city,
+#check8:checked ~ .gallery-body .image-box .col .monochrome {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+#check8:checked ~ .gallery-body .image-box .col .uncategorized {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+/*************** Image Sorting Ends ***************/
+/*************** Images Ends ***************/
+/*************** Gallery Container Ends ***************/
+/*************** Gallery Page Ends ***************/
 
 /*************** Footer Begins ***************/
 main .container .footer {
@@ -404,6 +623,7 @@ main .container .footer .copyright p {
 
 /*************** Desktop Begins ***************/
 @media (min-width: 450px) {
+  /*************** HomePage Begins ***************/
   /*************** Sidebar Begins ***************/
   aside {
     min-width: 250px;
@@ -413,7 +633,6 @@ main .container .footer .copyright p {
   aside .container {
     padding: 40px;
     display: block;
-    background: #f1f1f1;
   }
   aside .container .logo a {
     display: block;
@@ -436,6 +655,9 @@ main .container .footer .copyright p {
     transform: scale(0);
   }
   /*************** Nav Begins ***************/
+  aside .container .nav .nav-list .nav-items .active{
+    color: #000;
+  }
   aside .container .menu-contents > * {
     display: block;
   }
@@ -487,7 +709,7 @@ main .container .footer .copyright p {
     padding-top: 0;
   }
   /*************** About Begins ***************/
-  main .container .about {
+  main .container .about-container {
     width: 100%;
     height: 677px;
     flex-direction: row;
@@ -495,95 +717,95 @@ main .container .footer .copyright p {
     align-items: center;
     padding: 0 0 0 100px;
   }
-  main .container .about::before {
+  main .container .about-container::before {
     width: 120%;
     height: 40%;
     transform: translate(-50%, 100%) rotate(-3.5deg);
   }
-  main .container .about .about-text {
+  main .container .about-container .about-text {
     text-align: left;
   }
-  main .container .about .about-text .name {
+  main .container .about-container .about-text .name {
     margin-bottom: 30px;
     font-size: 4rem;
   }
-  main .container .about .about-text .info {
+  main .container .about-container .about-text .info {
     margin-bottom: 30px;
     font-size: 1.25rem;
   }
-  main .container .about .about-text a .learn {
+  main .container .about-container .about-text a .learn {
     margin: 0;
     font-size: 1.5rem;
   }
-  main .container .about .photographer img {
+  main .container .about-container .photographer img {
     width: 582px;
     filter: contrast(100%) brightness(80%);
   }
   /*************** About Ends ***************/
 
   /*************** Gallery Begins ***************/
-  main .container .gallery {
+  main .container .gallery-container {
     height: 100%;
   }
-  main .container .gallery .gallery-text .title {
+  main .container .gallery-container .gallery-text .title {
     font-size: 3rem;
   }
-  main .container .gallery .image-container {
+  main .container .gallery-container .image-container {
     display: flex;
     width: 100%;
   }
-  main .container .gallery .image-container .col {
+  main .container .gallery-container .image-container .col {
     display: flex;
     flex-direction: column;
     width: 32.5%;
     position: relative;
   }
-  main .container .gallery .image-container .col img {
+  main .container .gallery-container .image-container .col img {
     width: 100%;
     padding: 10px;
   }
-  main .container .gallery .image-container .col3 img:nth-child(2) {
+  main .container .gallery-container .image-container .col3 img:nth-child(2) {
     height: 50%;
     object-fit: cover;
   }
-  main .container .gallery .image-container .col3 .button {
+  main .container .gallery-container .image-container .col3 .button {
     position: absolute;
     bottom: 0;
     right: 0;
     padding-top: 15px;
   }
-  main .container .gallery .image-container .col3 .button a .more {
+  main .container .gallery-container .image-container .col3 .button a .more {
     padding: 10px 30px;
     font-size: 1.25rem;
   }
   /*************** Gallery Ends ***************/
 
   /*************** Contact Begins ***************/
-  main .container .contact {
+  main .container .contact-container {
     width: 100%;
     padding: 30px;
   }
-  main .container .contact .contact-info-cards {
+  main .container .contact-container .contact-info-cards {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  main .container .contact .contact-info-cards > * {
+  main .container .contact-container .contact-info-cards > * {
     width: 32.5%;
   }
-  main .container .contact .contact-info-cards:last-child > * {
+  main .container .contact-container .contact-info-cards:last-child > * {
     width: 48.5%;
   }
-  main .container .contact .contact-info-cards:last-child .form {
+  main .container .contact-container .contact-info-cards:last-child .form {
     display: block;
   }
-  main .container .contact .contact-info-cards:last-child .form form {
+  main .container .contact-container .contact-info-cards:last-child .form form {
     padding: 30px;
     width: 100%;
   }
-  main .container .contact .contact-info-cards:last-child .form form input,
-  main .container .contact .contact-info-cards:last-child .form form textarea {
+  main .container .contact-container .contact-info-cards:last-child .form form input,
+  main .container .contact-container .contact-info-cards:last-child .form form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 30px;
@@ -593,30 +815,18 @@ main .container .footer .copyright p {
     color: white;
     height: auto;
   }
-  main
-    .container
-    .contact
-    .contact-info-cards:last-child
-    .form
-    form
-    input::placeholder,
-  main
-    .container
-    .contact
-    .contact-info-cards:last-child
-    .form
-    form
-    textarea::placeholder {
+  main .container .contact-container .contact-info-cards:last-child .form form input::placeholder,
+  main .container .contact-container .contact-info-cards:last-child .form form textarea::placeholder {
     font-size: 18px;
   }
-  main .container .contact .contact-info-cards:last-child .form form button {
+  main .container .contact-container .contact-info-cards:last-child .form form button {
     font-size: 18px;
     padding: 10px 30px;
     color: #202224;
     background-color: white;
     border-radius: 50px;
   }
-  main .container .contact .map iframe {
+  main .container .contact-container .map iframe {
     width: 100%;
     height: 516px;
   }
@@ -627,6 +837,95 @@ main .container .footer .copyright p {
     display: none;
   }
   /*************** Footer Ends ***************/
+  /*************** HomePage Ends ***************/
+
+  /*************** Gallery Page Begins ***************/
+  /*************** Gallery Header Begins ***************/
+  main .container .gallery .header::before {
+    transform: translate(-50%, 100%) rotate(-1.9deg);
+  }
+  /*************** Gallery Header Ends ***************/
+
+  /*************** Gallery Container Begins ***************/
+  /*************** Categories Begins ***************/
+  main .container .gallery .gallery-body .categories {
+    width: 100%;
+  }
+  main .container .gallery .gallery-body .categories .category-items {
+    width: 100%;
+  }
+  main .container .gallery .gallery-body .categories .category-items .category-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main .container .gallery .gallery-body .categories .kebab {
+    display: none;
+  }
+  main .container .gallery .gallery-body .categories .category-items .category-container label {
+    padding: 5px 15px;
+  }
+  /*************** Categories Ends ***************/
+
+  /*************** Images Begins ***************/
+  main .container .gallery .gallery-body .col {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  main .container .gallery .gallery-body .col .pic {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 0;
+    transition: 0.5s;
+    position: relative;
+    box-shadow: 3px 3px 5px rgb(83, 83, 83);
+    overflow: hidden;
+  }
+  main .container .gallery .gallery-body .col .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  main .container .gallery .gallery-body .col .pic::before {
+    content: "SHUTTERSCAPE";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+  }
+  main .container .gallery .gallery-body .col .pic::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+  main .container .gallery .gallery-body .col .pic:hover::after {
+    height: 100%;
+  }
+  main .container .gallery .gallery-body .col .pic:hover::before {
+    top: 50%;
+    opacity: 1;
+  }
+  /*************** Images Ends ***************/
+  /*************** Gallery Container Ends ***************/
+  /*************** Gallery Page Ends ***************/
   /*************** Main Ends ***************/
 }
 /*************** Desktop Ends ***************/
