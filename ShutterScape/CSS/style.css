@@ -359,9 +359,8 @@ main .container .contact-container .contact-info-cards:last-child .map iframe {
 /*************** Contact Ends ***************/
 /*************** HomePage Ends ***************/
 
-/*************** Gallery Page Begins ***************/
-/*************** Gallery Header Begins ***************/
-main .container .gallery .header {
+/*************** Global Header Begins ***************/
+main .container .header {
   width: 100%;
   height: 200px;
   display: flex;
@@ -369,12 +368,12 @@ main .container .gallery .header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px;
+  padding: 20px 30px;
   background-color: black;
   position: relative;
   overflow: hidden;
 }
-main .container .gallery .header::before {
+main .container .header::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -385,14 +384,14 @@ main .container .gallery .header::before {
   height: 40%;
   z-index: 1;
 }
-main .container .gallery .header .heading {
+main .container .header .heading {
   color: white;
   font-size: 64px;
 }
-/*************** Gallery Header Ends ***************/
+/*************** Global Header Ends ***************/
 
-/*************** Gallery Container Begins ***************/
-main .container .gallery .gallery-body {
+/*************** Global Container Begins ***************/
+main .container .body {
   width: 100%;
   height: 100%;
   display: flex;
@@ -402,6 +401,10 @@ main .container .gallery .gallery-body {
   padding: 30px;
   position: relative;
 }
+/*************** Global Container Ends ***************/
+
+/*************** Gallery Page Begins ***************/
+/*************** Gallery Container Begins ***************/
 /*************** Categories Begins ***************/
 main .container .gallery .gallery-body .categories {
   display: flex;
@@ -576,6 +579,27 @@ main .container .gallery .gallery-body .col .pic img {
 /*************** Gallery Container Ends ***************/
 /*************** Gallery Page Ends ***************/
 
+/*************** About Page Begins ***************/
+main .container .about .body .row {
+  width: 100%;
+}
+main .container .about .body .row .img img {
+  width: 100%;
+}
+main .container .about .body .r1 .text h2 {
+  font-size: 56px;
+}
+main .container .about .body .row .text {
+  padding: 20px 15px;
+}
+main .container .about .body .row .text {
+  font-size: 20px;
+}
+main .container .about .body .row:last-child .img img {
+  display: none;
+}
+/*************** About Page Ends ***************/
+
 /*************** Footer Begins ***************/
 main .container .footer {
   width: 100%;
@@ -655,7 +679,7 @@ main .container .footer .copyright p {
     transform: scale(0);
   }
   /*************** Nav Begins ***************/
-  aside .container .nav .nav-list .nav-items .active{
+  aside .container .nav .nav-list .nav-items .active {
     color: #000;
   }
   aside .container .menu-contents > * {
@@ -839,12 +863,12 @@ main .container .footer .copyright p {
   /*************** Footer Ends ***************/
   /*************** HomePage Ends ***************/
 
-  /*************** Gallery Page Begins ***************/
-  /*************** Gallery Header Begins ***************/
-  main .container .gallery .header::before {
+  /*************** Global Header Begins ***************/
+  main .container .header::before {
     transform: translate(-50%, 100%) rotate(-1.9deg);
   }
-  /*************** Gallery Header Ends ***************/
+  /*************** Global Header Ends ***************/
+  /*************** Gallery Page Begins ***************/
 
   /*************** Gallery Container Begins ***************/
   /*************** Categories Begins ***************/
@@ -878,17 +902,14 @@ main .container .footer .copyright p {
   }
   main .container .gallery .gallery-body .col .pic {
     margin-bottom: 15px;
-    border-radius: 10px;
     padding: 0;
     transition: 0.5s;
     position: relative;
-    box-shadow: 3px 3px 5px rgb(83, 83, 83);
     overflow: hidden;
   }
-  main .container .gallery .gallery-body .col .pic img{
+  main .container .gallery .gallery-body .col .pic img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
   }
   main .container .gallery .gallery-body .col .pic::before {
     content: "SHUTTERSCAPE";
@@ -911,7 +932,6 @@ main .container .footer .copyright p {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-radius: 10px;
     height: 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: 0.3s;
@@ -926,6 +946,29 @@ main .container .footer .copyright p {
   /*************** Images Ends ***************/
   /*************** Gallery Container Ends ***************/
   /*************** Gallery Page Ends ***************/
+
+  /*************** About Page Begins ***************/
+  main .container .about .about-body .row {
+    display: flex;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  main .container .about .about-body .row .text {
+    width: calc(100%-600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+  main .container .about .about-body .r2,
+  .r4 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .container .about .body .row:last-child .img img {
+    display: block;
+  }
+  /*************** About Page Ends ***************/
   /*************** Main Ends ***************/
 }
 /*************** Desktop Ends ***************/
