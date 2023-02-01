@@ -1,0 +1,423 @@
+/*************** Global Begins ***************/
+@import url("https://fonts.googleapis.com/css2?family=Cabin");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  overflow-x: hidden;
+}
+body {
+  background: #f5f5f5;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/*************** Global Ends ***************/
+
+/*************** Mobile Begins ***************/
+/*************** Login Page Begins ***************/
+main .container .login-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 26px;
+}
+main .container .login-page > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*************** Header Begins ***************/
+main .container .login-page .header a img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+main .container .login-page .header a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+main .container .login-page .header .page-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+/*************** Header Ends ***************/
+
+/*************** Form Begins ***************/
+main .container .login-page .form form {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .container .login-page .form form .txt-field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 25px 0 0 0;
+  overflow-x: visible;
+  width: 100%;
+}
+main .container .login-page .form form .txt-field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+main .container .login-page .form form .txt-field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+main .container .login-page .form form .txt-field input:focus ~ label,
+main .container .login-page .form form .txt-field input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+  color: #333;
+}
+main .container .login-page .form form button {
+  width: 100%;
+  max-width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 30px 0 10px 0;
+}
+/*************** Form Ends ***************/
+/*************** Login Page Ends ***************/
+
+/*************** Dashboard Begins ***************/
+/*************** Sidebar Begins ***************/
+aside {
+  width: 20%;
+  min-width: 300px;
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  float: left;
+}
+aside .container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+/*************** Logo Begins ***************/
+aside .container .logo {
+  display: flex;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+aside .container .logo:hover > .title {
+  color: #000;
+}
+aside .container .logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+aside .container .logo .title {
+  color: #757575;
+  transition: 0.5s;
+}
+/*************** Logo Ends ***************/
+
+/*************** Navbar Begins ***************/
+aside .container .navbar .nav-list .nav-items {
+  padding: 0 0 25px 0;
+}
+aside .container .navbar .nav-list .nav-items .active {
+  color: #000;
+}
+aside .container .navbar .nav-list .nav-items a {
+  color: #757575;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+aside .container .navbar .nav-list .nav-items a:hover {
+  color: #000;
+  transition: 0.5s;
+}
+/*************** Navbar Ends ***************/
+
+/*************** Footer Begins ***************/
+aside .container .footer {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  width: 100%;
+}
+aside .container .footer .logout {
+  padding-left: 50px;
+}
+aside .container .footer .logout img {
+  width: 20px;
+  height: 20px;
+}
+/*************** Footer Ends ***************/
+/*************** Sidebar Ends ***************/
+
+/*************** Main Begins ***************/
+main {
+  width: 80%;
+  float: right;
+}
+/*************** Header Begins ***************/
+main .container > .header {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+}
+main .container .header .icons-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+main .container .header .icons-list .icon-items {
+  position: relative;
+  margin: 0 0 0 40px;
+}
+main .container .header .icons-list .icon-items img {
+  height: 30px;
+}
+main .container .header .icons-list .icon-items:first-child {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+main .container .header .icons-list .icon-items:first-child img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*************** Header Ends ***************/
+/*************** Dashboard Container Begins ***************/
+main .container .dashboard {
+  padding: 30px;
+}
+/*************** Cards Begins ***************/
+main .container .dashboard .cards {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .container .dashboard .cards .card {
+  width: 260px;
+  height: 100px;
+  padding: 10px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border-left: 3px solid;
+}
+main .container .dashboard .cards .card .text h3 {
+  color: #CDCDCD;
+  font-size: 16px;
+}
+main .container .dashboard .cards .card .text h3 b {
+  color: #000;
+  font-size: 24px;
+}
+main .container .dashboard .cards .card .text p {
+  padding-left: 20px;
+  color: #8D8D8D;
+  font-size: 12px;
+}
+main .container .dashboard .cards .card .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .container .dashboard .cards .card .icon img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .container .dashboard .cards .card:nth-child(1) {
+  border-color: #6200EA;
+}
+main .container .dashboard .cards .card:nth-child(1) .icon {
+  background-color: #6200EA;
+}
+main .container .dashboard .cards .card:nth-child(2) {
+  border-color: #FFC107;
+}
+main .container .dashboard .cards .card:nth-child(2) .icon {
+  background-color: #FFC107;
+}
+main .container .dashboard .cards .card:nth-child(3) {
+  border-color: #9C27B0;
+}
+main .container .dashboard .cards .card:nth-child(3) .icon {
+  background-color: #9C27B0;
+}
+main .container .dashboard .cards .card:nth-child(4) {
+  border-color: #26A69A;
+}
+main .container .dashboard .cards .card:nth-child(4) .icon {
+  background-color: #26A69A;
+}
+/*************** Cards Ends ***************/
+
+/*************** Charts Begins ***************/
+main .container .dashboard .charts {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .container .dashboard .charts .chart {
+  height: 500px;
+  border-radius: 5px;
+}
+main .container .dashboard .charts .chart:first-child {
+  width: 69%;
+}
+main .container .dashboard .charts .chart:first-child .chart-contents .graph {
+  width: calc(100% - 150px);
+}
+main .container .dashboard .charts .chart:nth-child(2) {
+  width: 30%;
+}
+main .container .dashboard .charts .chart:nth-child(2) .chart-contents {
+  width: 100%;
+}
+main .container .dashboard .charts .chart:nth-child(3) {
+  width: 100%;
+  margin-top: 10px;
+}
+main .container .dashboard .charts .chart:nth-child(3) .chart-contents {
+  background-color: white;
+  padding: 30px;
+}
+main .container .dashboard .charts .chart .chart-heading {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: white;
+  border-bottom: 1px solid #DFDFDF;
+}
+main .container .dashboard .charts .chart .chart-heading .text h3 {
+  font-size: 18px;
+}
+main .container .dashboard .charts .chart .chart-heading .text p {
+  font-size: 11px;
+}
+main .container .dashboard .charts .chart .chart-heading .icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+}
+main .container .dashboard .charts .chart .chart-contents {
+  width: 100%;
+  height: calc(100% - 80px);
+}
+main .container .dashboard .charts .chart .chart-contents .chart-data {
+  padding: 0 20px;
+  height: 100%;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  float: left;
+}
+main .container .dashboard .charts .chart .chart-contents .chart-data .data p {
+  font-size: 18px;
+}
+main .container .dashboard .charts .chart .chart-contents .chart-data .data h2 {
+  font-size: 24px;
+}
+main .container .dashboard .charts .chart .chart-contents .graph {
+  width: 100%;
+  height: 100%;
+  float: right;
+  background-color: #ffffff;
+}
+main .container .dashboard .charts .chart .chart-contents table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f5f5f5;
+}
+main .container .dashboard .charts .chart .chart-contents table tr th, main .container .dashboard .charts .chart .chart-contents table tr td {
+  padding: 10px;
+  text-align: left;
+}
+main .container .dashboard .charts .chart .chart-contents table tr th {
+  border-bottom: 1px solid #D9D9D9;
+}
+/*************** Chart Ends ***************/
+/*************** Dashboard Container Ends ***************/
+/*************** Main Ends ***************/
+/*************** Dashboard Ends ***************/
+/*************** Mobile Ends ***************/
+
+/*************** Desktop Begins ***************/
+@media (min-width: 450px) {
+  main .container .login-page {
+    max-width: 350px;
+  }
+  main .container .login-page .form form {
+    width: 80%;
+  }
+  main .container .login-page .form form button:hover {
+    background-color: white;
+    border: black 1px solid;
+    color: #333;
+    transition: 0.25s;
+  }
+}
+/*************** Desktop Ends ***************/
