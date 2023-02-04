@@ -324,6 +324,10 @@ main .container .contact-container .contact-info-cards > * {
   padding: 10px 30px;
   background: #202224;
 }
+main .container .contact-container .contact-info-cards .card h3,
+main .container .contact-container .contact-info-cards .card p {
+  padding: 5px;
+}
 main .container .contact-container .contact-info-cards .map {
   background: none;
   padding: 10px 0 0 0;
@@ -632,6 +636,10 @@ main .container .contact-me-container .contact-info-cards > * {
   padding: 10px 30px;
   background: #202224;
 }
+main .container .contact-me-container .contact-info-cards .card h3,
+main .container .contact-me-container .contact-info-cards .card p {
+  padding: 10px;
+}
 main .container .contact-me-container .contact-info-cards .map {
   background: none;
   padding: 10px 0 0 0;
@@ -718,7 +726,7 @@ main .container .review-container {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 main .container .review-container .form {
@@ -726,37 +734,97 @@ main .container .review-container .form {
   width: 100%;
 }
 main .container .review-container .form form {
-  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+main .container .review-container .form form {
+  box-sizing: border-box;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .container .review-container .form form .txt-field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 25px 0 0 0;
+  overflow-x: visible;
   width: 100%;
 }
-main .container .review-container .form form input,
-main .container .review-container .form form textarea{
+main .container .review-container .form form .txt-field input,
+main .container .review-container .form form .txt-field textarea {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+}
+main .container .review-container .form form .txt-field textarea {
+  max-height: 80px;
+  padding: 10px 0;
+  resize: none;
+}
+main .container .review-container .form form .txt-field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+main .container .review-container .form form .txt-field input:focus ~ label,
+main .container .review-container .form form .txt-field input:valid ~ label,
+main .container .review-container .form form .txt-field textarea:focus ~ label,
+main .container .review-container .form form .txt-field textarea:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+  color: white;
+}
+main .container .review-container .form form input[type="submit"] {
+  width: 100%;
+  max-width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 30px 0 10px 0;
+}
+main .container .contact-container .contact-info-cards:last-child .form {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .review-container .form form .txt-field input,
+main .container .review-container .form form .txt-field textarea{
   width: 100%;
   padding: 10px;
-  margin-bottom: 30px;
   border: none;
-  border: 1px solid white;
-  background-color: #d9d9d9;
-  color: white;
+  color: black;
   height: auto;
 }
-main .container .review-container .form form input::placeholder,
-main .container .review-container .form form textarea::placeholder {
-  font-size: 18px;
-}
-main .container .review-container .form form button {
-  font-size: 18px;
-  padding: 10px 30px;
-  color: #202224;
-  background-color: white;
-  border-radius: 50px;
+main .container .review-container .form form .txt-field input:focus ~ label,
+main .container .review-container .form form .txt-field input:valid ~ label,
+main .container .review-container .form form .txt-field textarea:focus ~ label 
+main .container .review-container .form form .txt-field textarea:valid ~ label {
+  color: black;
+  z-index: 1;
 }
 /*************** Stars Begins ***************/
 main .container .review-container .form form .stars{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 30px 0 30px 0;
 }
 main .container .review-container .form form .stars label svg path{
   fill: none;
@@ -1068,34 +1136,72 @@ main .container .footer .copyright p {
   main .container .contact-container .contact-info-cards:last-child > * {
     width: 48.5%;
   }
+  form {
+    box-sizing: border-box;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form .txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 25px 0 0 0;
+    overflow-x: visible;
+    width: 100%;
+  }
+  form .txt-field input,
+  form .txt-field textarea {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+  }
+  form .txt-field textarea {
+    max-height: 80px;
+    padding: 10px 0;
+    resize: none;
+  }
+  form .txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  form .txt-field input:focus ~ label,
+  form .txt-field input:valid ~ label,
+  form .txt-field textarea:focus ~ label,
+  form .txt-field textarea:valid ~ label {
+    top: -5px;
+    font-size: 12px;
+    color: white;
+  }
+  form input[type="submit"] {
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 30px 0 10px 0;
+  }
   main .container .contact-container .contact-info-cards:last-child .form {
     display: block;
-  }
-  main .container .contact-container .contact-info-cards:last-child .form form {
-    padding: 30px;
-    width: 100%;
-  }
-  main .container .contact-container .contact-info-cards:last-child .form form input,
-  main .container .contact-container .contact-info-cards:last-child .form form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-    border: none;
-    border: 1px solid white;
-    background-color: #202224;
-    color: white;
-    height: auto;
-  }
-  main .container .contact-container .contact-info-cards:last-child .form form input::placeholder,
-  main .container .contact-container .contact-info-cards:last-child .form form textarea::placeholder {
-    font-size: 18px;
-  }
-  main .container .contact-container .contact-info-cards:last-child .form form button {
-    font-size: 18px;
-    padding: 10px 30px;
-    color: #202224;
-    background-color: white;
-    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   main .container .contact-container .map iframe {
     width: 100%;
@@ -1266,7 +1372,10 @@ main .container .footer .copyright p {
 
   /*************** Review Begins ***************/
   main .container .review-container{
-    width: 100%;
+    width: 60vw;
+  }
+  main .container .review-container .form{
+    width: 100%   ;
   }
   main .container .review-container .review-list{
     width: 100%;

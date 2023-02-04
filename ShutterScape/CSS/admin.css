@@ -97,7 +97,7 @@ main .container .login-page .form form .txt-field input:valid ~ label {
   font-size: 12px;
   color: #333;
 }
-main .container .login-page .form form button {
+main .container .login-page .form form input[type="submit"] {
   width: 100%;
   max-width: 150px;
   height: 40px;
@@ -413,7 +413,7 @@ main .container .dashboard .charts .chart .chart-contents table tr th {
   main .container .login-page .form form {
     width: 80%;
   }
-  main .container .login-page .form form button:hover {
+  main .container .login-page .form form input[type="submit"]:hover {
     background-color: white;
     border: black 1px solid;
     color: #333;

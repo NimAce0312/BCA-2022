@@ -154,23 +154,28 @@
           </div>
           <div class="contact-info-cards">
             <div class="form">
-              <form class="message" action="index.html" method="post">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
-                <textarea
-                  name="message"
-                  rows="8"
-                  cols="80"
-                  placeholder="Message"
-                  required
-                ></textarea>
-                <button type="submit" name="button">SEND MESSAGE</button>
+              <form action="index.html">
+                <div class="txt-field">
+                  <input type="text" id="name" required />
+                  <span></span>
+                  <label for="name">Name</label>
+                </div>
+                <div class="txt-field">
+                  <input type="email" id="email" required />
+                  <span></span>
+                  <label for="email">Email</label>
+                </div>
+                <div class="txt-field">
+                  <input type="text" id="subject" required />
+                  <span></span>
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="txt-field">
+                  <textarea id="message" required></textarea>
+                  <span></span>
+                  <label for="message">Message</label>
+                </div>
+                <input type="submit" value="SEND MESSAGE" />
               </form>
             </div>
             <div class="map">
