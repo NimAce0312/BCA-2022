@@ -798,12 +798,6 @@ main .container .review-container .form form input[type="submit"] {
   cursor: pointer;
   margin: 30px 0 10px 0;
 }
-main .container .contact-container .contact-info-cards:last-child .form {
-  display: block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 main .container .review-container .form form .txt-field input,
 main .container .review-container .form form .txt-field textarea{
   width: 100%;
@@ -824,6 +818,7 @@ main .container .review-container .form form .stars{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
   margin: 30px 0 30px 0;
 }
 main .container .review-container .form form .stars label svg path{
